@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link href="reset.css" rel="stylesheet" type="text/css">
+	<link href="website.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="menu_bar">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="calendar.html">Calendar</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Recipes</a>
+    <div class="dropdown-content">
+      <a href="pancakes.html">Pancakes</a>
+      <a href="meatballs.html">Meatballs</a>
+    </div>
+  </li>
+    <li id="login"><a id="active" href="login.html">Log in</a></li>
+</ul>
+</div>
+
+
+
+<div class="grid12-6">
+
+<div class="inner_box">
+	<div class="register">
+		<h2>Register new user</h2>
+		<h3>Username and password has to be at least 3 charecters long.</h3>
+
+		<form action="register.php" method="get">
+			<div class="nickName">
+			<label for="username">What username do you want?<br></label>
+	    	<input type="text" name="username" class='text-author'/ placeholder="Write your user name here">
+	    	</div>
+	    	<div class="password">
+	    	<label for="password">Enter a password:<br></label>
+			<input type="password" name="password" class='text-author'/ placeholder="Write your password here">
+	    	</div>
+
+	    	<div class="submit">
+	    	<input type="submit" value="Register">
+	    	<input type="submit" formaction="register.html" value="Cancel" >
+	    	</div>
+
+
+	    </form>
+
+	    </div>
+
+
+</div>
+</div>
+
+</body></html>
