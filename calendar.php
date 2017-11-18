@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +13,7 @@
 <div class="menu_bar">
 <ul>
   <li><a href="index.html">Home</a></li>
-  <li><a id="active" href="calendar.html">Calendar</a></li>
+  <li><a id="active" href="calendar.php">Calendar</a></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Recipes</a>
     <div class="dropdown-content">
@@ -19,7 +21,16 @@
       <a href="meatballs.php">Meatballs</a>
     </div>
   </li>
-      <li id="login"><a id="active" href="login.html">Log in</a></li>
+                <?php
+	        if($_SESSION["user"] !== null){
+	        	echo "<li id='logout'><a href='logout.php'>Log out</a></li>
+	        	<li id='user'>Logged in as: {$_SESSION['user']}</li>";
+	        	}
+	        else{
+	        echo "<li id='login'><a href='login.html'>Log in</a></li>";
+	        echo $_SESSION["user"] . "ugug";
+	        }
+	?>
 </ul>
 </div>
 
